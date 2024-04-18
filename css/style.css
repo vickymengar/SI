@@ -1,0 +1,356 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+body {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+
+.head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 63px;
+    background-color: #09090B;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    margin-right: 10px;
+}
+
+.Logo {
+    margin-left: 30px;
+}
+
+.Logo img {
+    width: 120px; /* Ajusta el ancho según tu preferencia */
+    height: auto; /* Mantiene la proporción */
+}
+
+.Logo a {
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 12.5px;
+}
+
+.navbar a {
+    display: block;
+    padding: 20px 20px;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12.5px;
+}
+
+.navbar a:hover {
+    background: #192655;
+    border-radius: 2px;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url(img/fondo4.jpg) no-repeat center;
+    background-size: cover;
+    /* Añadir posición relativa */
+    position: relative;
+}
+
+.header::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1600px; /* Ancho de la barra */
+    height: 3px; /* Grosor de la barra */
+    background-color: #111111; /* Color de la barra */
+}
+
+
+.title {
+    margin-bottom: 10px;
+    font-size: 60px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.title3 {
+    margin-bottom: 10px;
+    font-size: 60px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+
+p {
+    margin-bottom: 40px;
+    margin-top: 5px;
+    font-size: 18px;
+    color: #ffffff;
+    text-align: center;
+    padding: 0 350px;
+    font-family:'Roboto', sans-serif;
+    
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 40px;
+    border: 2px solid #192655;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #192655;
+    border-radius: 8px;
+    text-align: justify;
+}
+
+.btn:hover {
+    background: #1B1D21;
+    border: 2px solid #1B1D21;
+}
+
+.content {
+    padding-top: 63px; /* Añadir padding-top igual a la altura del encabezado */
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+.sau {
+    padding: 120px 0;
+    background: #0a0a0a;
+}
+ 
+.box-container3 /*inicio box container 3*/{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    flex-wrap: wrap;
+}
+
+.box-container3 .box {
+    width: 250px;
+    padding-bottom: 10px;
+    text-align: center;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 3);
+    background: #111319;
+    margin: 20px 20px;
+    border-radius: 5px;
+}
+.box-container3 .box:hover {
+    background-color: #192655; /* Cambia el color de fondo al hacer hover */
+    color: #192655; /* Cambia el color del texto al hacer hover */
+    cursor: pointer;
+}
+
+
+.box-container3 .box img {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: -30px;
+    border: 6px solid #192655;
+}
+
+.box-container3 .box h3 {
+    font-size: 20px;
+    color: #ffffff;
+    padding-top: 10px;
+}
+
+.box-container3 .box p {
+    font-size: 15px;
+    color: #ffffff;
+    padding: 0;
+    margin-top: 15px;
+    text-align: center;
+    padding: 0 20px; /* posicion*/
+    font-family:'Lato', sans-serif;
+    
+} /*fin box container 3*/
+
+.about { /* inicio box container 2*/ 
+    background: #0a0a0a;
+    padding: 50px 0;
+}
+
+.box-container2 {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    flex-wrap: wrap;
+}
+
+.box-container2 .box {
+    width: 250px;
+    padding-bottom: 50px;
+    text-align: center;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 3);
+    background: #111319;
+    margin: 20px 20px;
+    border-radius: 5px;
+    margin-bottom: 40px;
+}
+
+.box-container2 .box:hover {
+    background-color: #192655; /* Cambia el color de fondo al hacer hover */
+    color: #192655; /* Cambia el color del texto al hacer hover */
+    cursor: pointer;
+}
+
+
+.box-container2 .box img {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: -30px;
+    border: 6px solid #192655;
+}
+
+.box-container2 .box h3 {
+    font-size: 20px;
+    color: #ffffff;
+    padding-top: 10px;
+    text-align: center;
+    padding: 0 20px; /* Ajusta el padding horizontal según sea necesario */
+}
+
+.box-container2 .box p {
+    font-size: 15px;
+    color: #ffffff;
+    padding: 0;
+    margin-top: 17px;
+    text-align:center;
+    font-family:'Lato', sans-serif;
+}
+
+.box-container2 .box .stars {
+    font-size: 15px;
+    color: #ffffff;
+} /* fin box container 2*/
+
+
+.title-bar::after {
+    content: "";
+    display: block;
+    width: -120%;
+    height: 3px;
+    background-color: #192655;
+    margin-top: 5px; 
+}
+
+.custom-scroll-down-arrow {
+    position:absolute;
+    bottom: 40px;
+    left: 49%;
+    transform: translateX(50%);
+}
+
+.footer{
+    width: -100%;
+    position: static;
+    bottom: 0;
+    left: 0;
+    padding: 2rem 8%;
+    background-color: #111111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logof{
+    height: 80px;
+    margin-bottom: -10rem; /* Ajustar el margen inferior del logo según sea necesario */
+    margin-top: 0;
+}
+
+.social-icons-container, .footer-menu-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.social-icon{
+    height: 100px;
+    width: 100px;
+    background-position: center;
+    background-size: 40%;
+    background-repeat: no-repeat;
+    margin: 1rem;
+}
+
+.footer-menu-container{
+    list-style-type: none;
+    color: #ffffff;
+    font-size: 11;
+}
+
+.menu-item{
+    margin: 10px 20px 10px;
+    cursor: pointer;
+    opacity: 1.0;
+    
+}
+
+.menu-item:hover{
+    opacity: 0.6;
+}
+
+.copyright{
+    color: #ffffff;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .title {
+        margin-bottom: 0px;
+        font-size: 40px;
+    }
+    .sau {
+        height: 100vh;
+        padding: 50px 0;
+    }
+    .about {
+        height: 100vh;
+        padding: 50px 0;
+    }
+    .footer-section {
+        display: flex;
+        flex-direction: column;
+    }
+    .f-enlaces {
+        display: none;
+    }
+    .navbar {
+        display: none;
+    }
+}

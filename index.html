@@ -111,9 +111,9 @@
                         <div class="color-change p-3 mb-3">
                             <h3 class="text-center">Funcionalidades del Sistema</h3>
                             <li style="text-align: justify;">Análisis de datos históricos de delitos.</li>
-                            <li style="text-align: justify;">Modelo de predicción basado en algoritmos de Machine Learning.</li>
+                            <li style="text-align: justify;">Modelo de predicción basado en el algoritmo de árbol de decisión de Machine Learning.</li>
                             <li style="text-align: justify;">Visualización de resultados y estadísticas.</li>
-                            <li style="text-align: justify;">Interfaz intuitiva para usuarios y autoridades.</li>
+        
                         </div>
                     </div>
                 </div>
@@ -121,15 +121,7 @@
                     <div class="col-12">
                         <div class="color-change p-3 mb-3">
                             <h3 class="text-center">¿Cómo Funciona?</h3>
-                            <p style="text-align: justify;">El sistema recopila datos históricos de delitos en Zacatelco, como tipo de delito, ubicación, fecha y hora, entre otros. Estos datos se utilizan para entrenar modelos de predicción que pueden prever la probabilidad de ocurrencia de diferentes tipos de delitos en áreas específicas y momentos determinados.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="color-change p-3 mb-3">
-                            <h3 class="text-center">¡Únete a Nosotros!</h3>
-                            <p style="text-align: justify;">Si estás interesado en contribuir a este proyecto o quieres saber más sobre nuestras iniciativas, no dudes en ponerte en contacto con nosotros.</p>
+                            <p style="text-align: justify;">El sistema recopila datos históricos de delitos en Zacatelco, como tipo de delito, sección en la que ocurre, el mes en el que ocurre, entre otros. Estos datos se utilizan para entrenar modelos de predicción que pueden prever la probabilidad de ocurrencia de diferentes tipos de delitos en áreas específicas y momentos determinados.</p>
                         </div>
                     </div>
                 </div>
@@ -139,7 +131,7 @@
 
     <section class="jumbotron sau mb-3" id="regresion_logistica">
         <h2 class="display-4 text-center mb-5">Datos de Regresión Logística</h2>
-        <p>Los datos utilizados para las predicciones provienen del número de carpetas de investigación y número de víctimas incluido en los informes y estadísiticas que publica el Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública (SESNSP) y en el Semáforo delictivo del Estado de Tlaxcala.</p>
+        <p>Los datos utilizados para las predicciones provienen del número de carpetas de investigación y número de víctimas incluido en los informes y estadísiticas que publica el Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública (SESNSP) y en el Semáforo delictivo del Estado de Tlaxcala de los meses de Enero a lo que va de abril del año 2024</p>
         <br>
         <div class="container">
             <div class="row">
@@ -148,9 +140,7 @@
                         <thead>
                             <tr>
                                 <th>Delito</th>
-                                <th>Carpetas</th>
-                                <th>Tasa</th>
-                                <th>Año</th>
+                                <th>Casos</th>
                                 <th>Mes</th>
                                 <th>Sección</th>
                             </tr>
@@ -178,53 +168,13 @@
     <section class="container-fluid mb-3" id="prediccion">
         <h2 class="display-4 text-center mb-5">Predicción de Niveles de Delitos</h2>
         <div class="row">
-            <div class="col-lg-6">
-                <section class="container about style="text-align: center;"">
-                    <form>
-                        <div class="form-group">
-                            <label for="delito">Delito:</label>
-                            <select id="delito" name="delito" class="form-control" required>
-                                <option value="Homicidio doloso">Homicidio doloso</option>
-                                <option value="Feminicidio">Feminicidio</option>
-                                <option value="Homicidio culposo">Homicidio culposo</option>
-                                <option value="Secuestro">Secuestro</option>
-                                <option value="Extorsión">Extorsión</option>
-                                <option value="Robo con violencia">Robo con violencia</option>
-                                <option value="Robo de vehículo">Robo de vehículo</option>
-                                <option value="Robo a casa habitación">Robo a casa habitación</option>
-                                <option value="Robo de negocio">Robo de negocio</option>
-                                <option value="Robo a transeúnte total">Robo a transeúnte total</option>
-                                <option value="Robo en transporte público">Robo en transporte público</option>
-                                <option value="Violación">Violación</option>
-                                <option value="Violencia familiar">Violencia familiar</option>
-                                <option value="Trata de personas">Trata de personas</option>
-                                <option value="Narcomenudeo">Narcomenudeo</option>
-                                <option value="Lesiones dolosas">Lesiones dolosas</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="mes">Mes:</label>
-                            <select id="mes" name="mes" class="form-control" required>
-                                <option value="1">Enero</option>
-                                <option value="2">Febrero</option>
-                                <option value="3">Marzo</option>
-                                <option value="4">Abril</option>
-                                <option value="5">Mayo</option>
-                                <option value="6">Junio</option>
-                                <option value="7">Julio</option>
-                                <option value="8">Agosto</option>
-                                <option value="9">Septiembre</option>
-                                <option value="10">Octubre</option>
-                                <option value="11">Noviembre</option>
-                                <option value="12">Diciembre</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block">Obtener Predicción</button>
-                    </form>
-                </section>
-            </div>
-            <div class="col-lg-6">
+            <div class="col-lg-12 mb-3"  style="text-align: center;">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60284.94912716653!2d-98.28673701490061!3d19.203528948356187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cfdb3775db9433%3A0x35c4eabede2b080!2sZacatelco%2C%20Tlax.!5e0!3m2!1ses-419!2smx!4v1713515726311!5m2!1ses-419!2smx" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="col-lg-12">
+                <section class="container about" style="text-align: center;">
+                    <a href="https://colab.research.google.com/drive/1s4tWdT8LELS3jDf1re2KzvDU9MntB3hL?usp=sharing" class="btn btn-primary btn-block">Utilizar el modelo de Machine Learning</a>
+                </section>
             </div>
         </div>
     </section>
@@ -328,25 +278,23 @@
     <!-- Script para hacer funcionar el archivo Predicciones con el form-->
     <script>
         document.querySelector('form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Evitar que el formulario se envíe por defecto
+    event.preventDefault(); // Prevent the default form submission
+    
+    const formData = new FormData(this); // Get form data
+    
+    fetch('/obtener_prediccion', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        alert(data.resultado); // Display prediction result
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+});
 
-            // Obtener los datos del formulario
-            const formData = new FormData(this);
-
-            // Realizar una solicitud POST al servidor
-            fetch('/obtener_prediccion', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.json())
-            .then(data => {
-                // Mostrar los resultados en un cuadro de diálogo
-                alert(data.resultado);
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
-        });
     </script>
 
 </body>

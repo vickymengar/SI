@@ -1,97 +1,81 @@
-delito,carpetas,tasa,año,mes,seccion
-Homicidio doloso,1,2.12098074,2020,01,Primera
-Feminicidio,0,0,2020,01,Primera
-Homicidio culposo,0,0,2020,01,Primera
-Secuestro,0,0,2020,01,Primera
-Extorsión,0,0,2020,01,Primera
-Robo con violencia,0,0,2020,01,Primera
-Robo de vehículo,7,14.84686565,2020,01,Primera
-Robo a casa habitación,0,0,2020,01,Primera
-Robo a negocio,0,0,2020,01,Primera
-Robo a transeúnte total,0,0,2020,01,Primera
-Robo en transporte público,0,0,2020,01,Primera
-Violación,0,0,2020,01,Primera
-Violencia familiar,0,0,2020,01,Primera
-Trata de personas,0,0,2020,01,Primera
-Narcomenudeo,2,4.241961479,2020,01,Primera
-Lesiones dolosas,0,0,2020,01,Primera
-Homicidio doloso,0,0,2024,01,Primera
-Feminicidio,0,0,2024,01,Primera
-Homicidio culposo,0,0,2024,01,Primera
-Secuestro,0,0,2024,01,Primera
-Extorsión,0,0,2024,01,Primera
-Robo con violencia,2,4.002321243,2024,01,Primera
-Robo de vehículo,16,32.01856995,2024,01,Primera
-Robo a casa habitación,2,4.002321243,2024,01,Primera
-Robo a negocio,1,2.001160622,2024,01,Primera
-Robo a transeúnte total,1,2.001160622,2024,01,Primera
-Robo en transporte público,0,0,2024,01,Primera
-Violación,0,0,2024,01,Primera
-Violencia familiar,0,0,2024,01,Primera
-Trata de personas,0,0,2024,01,Primera
-Narcomenudeo,1,2.001160622,2024,01,Primera
-Lesiones dolosas,0,0,2024,01,Primera
-Homicidio doloso,0,0,2024,02,Segunda
-Feminicidio,0,0,2024,02,Segunda
-Homicidio culposo,0,0,2024,02,Segunda
-Secuestro,0,0,2024,02,Segunda
-Extorsión,0,0,2024,02,Segunda
-Robo con violencia,11,22.01276779,2024,02,Segunda
-Robo de vehículo,19,38.02205276,2024,02,Segunda
-Robo a casa habitación,3,6.003481865,2024,02,Segunda
-Robo a negocio,5,10.00580311,2024,02,Segunda
-Robo a transeúnte total,2,4.002321243,2024,02,Segunda
-Robo en transporte público,0,0,2024,02,Segunda
-Violación,0,0,2024,02,Segunda
-Violencia familiar,0,0,2024,02,Segunda
-Trata de personas,0,0,2024,02,Segunda
-Narcomenudeo,0,0,2024,02,Segunda
-Lesiones dolosas,1,2.001160622,2024,02,Segunda
-Homicidio doloso,1,2.001160622,2024,03,Tercera
-Feminicidio,1,3.840098381,2024,03,Tercera
-Homicidio culposo,0,0,2024,03,Tercera
-Secuestro,0,0,2024,03,Tercera
-Extorsión,0,0,2024,03,Tercera
-Robo con violencia,2,4.002321243,2024,03,Tercera
-Robo de vehículo,15,30.01741028,2024,03,Tercera
-Robo a casa habitación,2,4.002321243,2024,03,Tercera
-Robo a negocio,1,2.001160622,2024,03,Tercera
-Robo a transeúnte total,0,0,2024,03,Tercera
-Robo en transporte público,0,0,2024,03,Tercera
-Violación,0,0,2024,03,Tercera
-Violencia familiar,0,0,2024,03,Tercera
-Trata de personas,0,0,2024,03,Tercera
-Narcomenudeo,3,6.003481865,2024,03,Tercera
-Lesiones dolosas,0,0,2024,03,Tercera
-Homicidio doloso,0,0,2023,05,Cuarta
-Feminicidio,1,2.001160622,2023,05,Cuarta
-Homicidio culposo,0,0,2023,05,Cuarta
-Secuestro,0,0,2023,05,Cuarta
-Extorsión,0,0,2023,05,Cuarta
-Robo con violencia,3,6.003481865,2023,05,Cuarta
-Robo de vehículo,9,18.00844559,2023,05,Cuarta
-Robo a casa habitación,2,4.002321243,2023,05,Cuarta
-Robo a negocio,2,4.002321243,2023,05,Cuarta
-Robo a transeúnte total,1,2.001160622,2023,05,Cuarta
-Robo en transporte público,0,0,2023,05,Cuarta
-Violación,0,0,2023,05,Cuarta
-Violencia familiar,0,0,2023,05,Cuarta
-Trata de personas,0,0,2023,05,Cuarta
-Narcomenudeo,0,0,2023,05,Cuarta
-Lesiones dolosas,1,2.001160622,2023,05,Cuarta
-Homicidio doloso,0,0,2023,06,Quinta
-Feminicidio,2,4.002321243,2023,06,Quinta
-Homicidio culposo,0,0,2023,06,Quinta
-Secuestro,0,0,2023,06,Quinta
-Extorsión,0,0,2023,06,Quinta
-Robo con violencia,4,8.004642486,2023,06,Quinta
-Robo de vehículo,12,24.01392746,2023,06,Quinta
-Robo a casa habitación,3,6.003481865,2023,06,Quinta
-Robo a negocio,3,6.003481865,2023,06,Quinta
-Robo a transeúnte total,2,4.002321243,2023,06,Quinta
-Robo en transporte público,0,0,2023,06,Quinta
-Violación,1,2.001160622,2023,06,Quinta
-Violencia familiar,0,0,2023,06,Quinta
-Trata de personas,0,0,2023,06,Quinta
-Narcomenudeo,1,2.001160622,2023,06,Quinta
-Lesiones dolosas,0,0,2023,06,Quinta
+tipodelito,númerodelitos,mes,seccion
+Homicidio doloso,1,1,1
+Feminicidio,0,2,1
+Homicidio culposo,0,3,1
+Secuestro,0,4,1
+Extorsión,0,5,1
+Robo con violencia,0,2,1
+Robo de vehículo,7,3,1
+Robo a casa habitación,0,4,1
+Robo a negocio,0,1,1
+Robo a transeúnte total,0,2,1
+Robo en transporte público,0,3,1
+Violación,0,4,1
+Violencia familiar,0,1,1
+Trata de personas,0,2,1
+Narcomenudeo,2,3,1
+Lesiones dolosas,0,4,1
+Homicidio doloso,0,2,2
+Feminicidio,0,3,2
+Homicidio culposo,0,4,2
+Secuestro,0,1,2
+Extorsión,0,2,2
+Robo con violencia,11,3,2
+Robo de vehículo,19,4,2
+Robo a casa habitación,3,1,2
+Robo a negocio,5,2,2
+Robo a transeúnte total,2,3,2
+Robo en transporte público,0,4,2
+Violación,0,1,2
+Violencia familiar,0,2,2
+Trata de personas,0,3,2
+Narcomenudeo,0,4,2
+Lesiones dolosas,1,1,2
+Homicidio doloso,1,3,3
+Feminicidio,1,4,3
+Homicidio culposo,0,1,3
+Secuestro,0,2,3
+Extorsión,0,3,3
+Robo con violencia,2,4,3
+Robo de vehículo,15,1,3
+Robo a casa habitación,2,2,3
+Robo a negocio,1,3,3
+Robo a transeúnte total,0,4,3
+Robo en transporte público,0,1,3
+Violación,0,2,3
+Violencia familiar,0,3,3
+Trata de personas,0,4,3
+Narcomenudeo,3,1,3
+Lesiones dolosas,0,2,3
+Homicidio doloso,0,4,4
+Feminicidio,1,1,4
+Homicidio culposo,0,2,4
+Secuestro,0,3,4
+Extorsión,0,4,4
+Robo con violencia,3,1,4
+Robo de vehículo,9,2,4
+Robo a casa habitación,2,3,4
+Robo a negocio,2,4,4
+Robo a transeúnte total,1,1,4
+Robo en transporte público,0,2,4
+Violación,0,3,4
+Violencia familiar,0,4,4
+Trata de personas,0,1,4
+Narcomenudeo,0,2,4
+Lesiones dolosas,1,3,4
+Homicidio doloso,0,1,5
+Feminicidio,2,2,5
+Homicidio culposo,0,3,5
+Secuestro,0,4,5
+Extorsión,0,1,5
+Robo con violencia,4,2,5
+Robo de vehículo,12,3,5
+Robo a casa habitación,3,4,5
+Robo a negocio,3,1,5
+Robo a transeúnte total,2,2,5
+Robo en transporte público,0,3,5
+Violación,1,4,5
+Violencia familiar,0,1,5
+Trata de personas,0,2,5
+Narcomenudeo,0,3,5
+Lesiones dolosas,1,4,5

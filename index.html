@@ -3,125 +3,351 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="img/logo.png">
-    <title>Predicción de Delitos en Zacatelco</title>
+    <!-- Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="icon" href="./img/alarma-activada (1).png">
+    <title>Sistema de predicción de delitos Zacatelco</title>
+    <style>
+        html,body {
+            height: 100%;
+        }
     
+        .footer {
+            width: 100%;
+            bottom: 0;
+        }
+    
+        .content-wrapper {
+            min-height: calc(100% - 40px); /* 56px es la altura aproximada del footer */
+        }
+
+        .navbar .navbar-nav .nav-link:hover {
+            color: #fff !important;
+            background-color: #007bff !important;
+            border-radius:5px;
+        }
+
+        .color-change:hover {
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s ease;
+            border-radius:5px;
+        }
+
+        .btn-fixed {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+        }
+
+        /* Estilo para la tabla */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border-bottom: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #007bff;
+            color:white;
+        }
+        /* Estilo para los botones de filtro */
+        .filter-buttons {
+            margin-bottom: 10px;
+        }
+        .filter-buttons button {
+            margin-right: 5px;
+        }
+    </style>
 </head>
 <body>
-    <div class="head">
-        <div class="Logo">
-            <a href="#"><img src="img/logo.png" alt="Logo de la empresa" class="logo-img" style="width:50px;">Sistema de Predicción de Delitos Zacatelco</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <a class="navbar-brand" href="#">
+            <img src="./img/alarma-activada (1).png" width="30" height="30" class="d-inline-block align-top" alt="">
+            Sistema de predicción de delitos
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#acerca">Acerca</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#regresion_logistica">Datos de Regresión Logística</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#prediccion">Predicción de Niveles de Delitos</a>
+                </li>
+            </ul>
         </div>
-        <nav class="navbar">
-            <a href="#">Acerca del proyecto</a>
-            <a href="pacientes1.html">Predicción</a>
-        </nav>
-    </div>
+    </nav>
 
-    <header class="content header">
-        <h2 class="title3">Mejora Tu Salud Con Aivi</h2>
-        <p>¡El Tratamiento Es Un Estilo De Vida Saludable!</p>
-        <a href="citas.html" class="btn">Visualizar Citas</a>
-        <div class="custom-scroll-down-arrow"><a href="#"><i class="fas fa-chevron-down" style="color: #192655; font-size: 24px;"></i></a></div>
-
+    <header class="jumbotron text-center">
+        <h2 class="display-4">Sistema de Predicción de Delitos</h2>
+        <p class="lead">¡Un paso adelante en seguridad!</p>
+        <p class="lead">Prediciendo delitos para mantener a Zacatelco a salvo</p>
+        <a href="#prediccion" class="btn btn-primary btn-lg">Obtener Predicción</a>
     </header>
     
-    <section class="content sau" id="nos-respaldan">
-        <h2 class="title title-bar">Nos Respaldan</h2>
-        <p>
-            En Aivi, nos enorgullece contar con un sólido respaldo proveniente
-            de diversos ámbitos académicos. Nuestra trayectoria está fundamentada 
-            por una base sólida de estudios universitarios, respaldados por 
-            el rigor académico y la excelencia educativa, ofreciendo el mejor servicio 
-            a nuestros clientes
-        </p>
-        
-        <div class="box-container3">
-            <div class="box">
-                <img src="img/escudo.png" alt="">
-                <h3>UATX</h3>
-                <p> Institución reconocida por su excelencia académica
-                    y su compromiso con la formación integral de sus estudiantes.
-                </p>
+    <section class="container sau mb-3 text-center" id="acerca">
+        <h2 class="display-4 text-center mb-5">Acerca</h2>
+        <div class="content-wrapper">
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="color-change p-3 mb-3">
+                            <h3 class="text-center">¡Bienvenido!</h3>
+                            <p style="text-align: justify;">Este proyecto tiene como objetivo utilizar técnicas de análisis de datos y aprendizaje automático para predecir la ocurrencia de delitos en Zacatelco. Nuestra misión es contribuir a la seguridad de la comunidad mediante la identificación temprana de patrones delictivos y la asignación eficiente de recursos policiales.</p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="color-change p-3 mb-3">
+                            <h3 class="text-center">Funcionalidades del Sistema</h3>
+                            <li style="text-align: justify;">Análisis de datos históricos de delitos.</li>
+                            <li style="text-align: justify;">Modelo de predicción basado en algoritmos de Machine Learning.</li>
+                            <li style="text-align: justify;">Visualización de resultados y estadísticas.</li>
+                            <li style="text-align: justify;">Interfaz intuitiva para usuarios y autoridades.</li>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="color-change p-3 mb-3">
+                            <h3 class="text-center">¿Cómo Funciona?</h3>
+                            <p style="text-align: justify;">El sistema recopila datos históricos de delitos en Zacatelco, como tipo de delito, ubicación, fecha y hora, entre otros. Estos datos se utilizan para entrenar modelos de predicción que pueden prever la probabilidad de ocurrencia de diferentes tipos de delitos en áreas específicas y momentos determinados.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="color-change p-3 mb-3">
+                            <h3 class="text-center">¡Únete a Nosotros!</h3>
+                            <p style="text-align: justify;">Si estás interesado en contribuir a este proyecto o quieres saber más sobre nuestras iniciativas, no dudes en ponerte en contacto con nosotros.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>    
+    </section>
 
-            <div class="box">
-                <img src="img/lic.jpg" alt="">
-                <h3>Lic. Naturopatia</h3>
-                <p> Programa académico reconocido por formar profesionales
-                    eficaces en el campo de la medicina natural y holistica.
-                </p>
+    <section class="jumbotron sau mb-3" id="regresion_logistica">
+        <h2 class="display-4 text-center mb-5">Datos de Regresión Logística</h2>
+        <p>Los datos utilizados para las predicciones provienen del número de carpetas de investigación y número de víctimas incluido en los informes y estadísiticas que publica el Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública (SESNSP) y en el Semáforo delictivo del Estado de Tlaxcala.</p>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col" id="table-container">
+                    <table class="table" id="data-table">
+                        <thead>
+                            <tr>
+                                <th>Delito</th>
+                                <th>Carpetas</th>
+                                <th>Tasa</th>
+                                <th>Año</th>
+                                <th>Mes</th>
+                                <th>Sección</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-body">
+                            <!-- Aquí se mostrarán los datos del CSV -->
+                        </tbody>
+                    </table>
+                </div>
             </div>
+            <div class="filter-buttons">
+                <label for="rowsToShow">Mostrar:</label>
+                <select id="rowsToShow" onchange="filterRows(this.value)">
+                    <option value="5" selected>5</option>
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                    <option value="all">Todos</option>
+                </select>
+            </div>            
+        </div>
+    </section>
 
-            <div class="box">
-                <img src="img/centro.jpg" alt="">
-                <h3>Cen. Biomagnetismo</h3>
-                <p>Enfoque medico basado en 
-                   el uso de imanes para equilibrar la energía del cuerpo.
-                </p>
+    <section class="container-fluid mb-3" id="prediccion">
+        <h2 class="display-4 text-center mb-5">Predicción de Niveles de Delitos</h2>
+        <div class="row">
+            <div class="col-lg-6">
+                <section class="container about style="text-align: center;"">
+                    <form>
+                        <div class="form-group">
+                            <label for="delito">Delito:</label>
+                            <select id="delito" name="delito" class="form-control" required>
+                                <option value="Homicidio doloso">Homicidio doloso</option>
+                                <option value="Feminicidio">Feminicidio</option>
+                                <option value="Homicidio culposo">Homicidio culposo</option>
+                                <option value="Secuestro">Secuestro</option>
+                                <option value="Extorsión">Extorsión</option>
+                                <option value="Robo con violencia">Robo con violencia</option>
+                                <option value="Robo de vehículo">Robo de vehículo</option>
+                                <option value="Robo a casa habitación">Robo a casa habitación</option>
+                                <option value="Robo de negocio">Robo de negocio</option>
+                                <option value="Robo a transeúnte total">Robo a transeúnte total</option>
+                                <option value="Robo en transporte público">Robo en transporte público</option>
+                                <option value="Violación">Violación</option>
+                                <option value="Violencia familiar">Violencia familiar</option>
+                                <option value="Trata de personas">Trata de personas</option>
+                                <option value="Narcomenudeo">Narcomenudeo</option>
+                                <option value="Lesiones dolosas">Lesiones dolosas</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="mes">Mes:</label>
+                            <select id="mes" name="mes" class="form-control" required>
+                                <option value="1">Enero</option>
+                                <option value="2">Febrero</option>
+                                <option value="3">Marzo</option>
+                                <option value="4">Abril</option>
+                                <option value="5">Mayo</option>
+                                <option value="6">Junio</option>
+                                <option value="7">Julio</option>
+                                <option value="8">Agosto</option>
+                                <option value="9">Septiembre</option>
+                                <option value="10">Octubre</option>
+                                <option value="11">Noviembre</option>
+                                <option value="12">Diciembre</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Obtener Predicción</button>
+                    </form>
+                </section>
+            </div>
+            <div class="col-lg-6">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60284.94912716653!2d-98.28673701490061!3d19.203528948356187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cfdb3775db9433%3A0x35c4eabede2b080!2sZacatelco%2C%20Tlax.!5e0!3m2!1ses-419!2smx!4v1713515726311!5m2!1ses-419!2smx" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </section>
 
-
-    <section class="content about">
-        <h2 class="title title-bar">Nosotros</h2>
-        <p>
-            Nuestro equipo está conformado por profesionales altamente capacitados y comprometidos, cuyos conocimientos 
-            están respaldados por la culminación de una licenciatura en Naturopatia. Esta formación académica especializada 
-            nos otorga las herramientas necesarias para ofrecer soluciones efectivas y respuestas confiables a las necesidades 
-            de nuestros clientes.
-        </p>
-        <div class="box-container2">
-            <div class="box">
-                <img src="img/escudo.png" alt="">
-                <h3>Dr. Víctor Cervantes Gracia</h3>
-                <p>Cedu. Prof.13645506</p>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
+    <footer class="jumbotron text-center mt-5 footer bg-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <img src="img/alarma-activada (2).png" class="logof mx-auto d-block">
                 </div>
-            </div>
-
-
-            <div class="box">
-                <img src="img/escudo.png" alt="">
-                <h3>Dr. Martha Aida Hernández Larios</h3>
-                <p>Cedu. Prof.1732424</p>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
+                <div class="col-12 mt-3">
+                    <span class="text-white">&copy;2024 Sistema de Predicción de Delitos en Zacatelco</span>
                 </div>
             </div>
         </div>
+    </footer>
+    
+    <button onclick="scrollToTop()" class="btn btn-dark btn-fixed">Ir Arriba</button>
 
-    </section>
+    <!-- Script para el botón-->
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
-    <script src="prueba.js"></script>
+    <!-- Script para la tabla dinámica desde el csv-->
+    <script>
+        // Función para cargar y mostrar los datos del archivo CSV
+        function loadCSV() {
+            // Ruta del archivo CSV
+            const csvFile = 'Delitos.csv';
+    
+            // Realizar una solicitud HTTP GET para obtener el archivo CSV
+            const request = new XMLHttpRequest();
+            request.open('GET', csvFile);
+            request.onreadystatechange = function () {
+                if (request.readyState === 4 && request.status === 200) {
+                    // Convertir los datos del CSV a filas de la tabla HTML
+                    const lines = request.responseText.split('\n');
+                    const tableBody = document.getElementById('table-body');
+                    
+                    // Empezar a iterar desde la segunda línea (índice 1) para omitir los encabezados
+                    for (let i = 1; i < lines.length; i++) {
+                        const line = lines[i];
+                        const cells = line.split(',');
+                        const row = document.createElement('tr');
+                        
+                        cells.forEach(function (cell) {
+                            const cellElement = document.createElement('td');
+                            cellElement.textContent = cell;
+                            row.appendChild(cellElement);
+                        });
+                        
+                        tableBody.appendChild(row);
+                    }
+                }
+            };
+            request.send();
+        }
+    
+        // Llamar a la función para cargar los datos del CSV cuando la página esté lista
+        window.addEventListener('load', loadCSV);
+    </script>    
+
+    <!-- Script para los botones de la tabla -->
+    <script>
+        // Función para filtrar las filas de la tabla según la selección del usuario
+        function filterRows(selectedValue) {
+            // Obtener todas las filas de la tabla
+            const rows = document.querySelectorAll('#data-table tbody tr');
+    
+            // Iterar sobre todas las filas y mostrar/ocultar según la selección del usuario
+            rows.forEach(function(row, index) {
+                if (selectedValue === 'all' || index < parseInt(selectedValue)) {
+                    row.style.display = 'table-row'; // Mostrar la fila
+                } else {
+                    row.style.display = 'none'; // Ocultar la fila
+                }
+            });
+        }
+    
+        // Llamar a la función para filtrar las filas al cargar la página
+        window.addEventListener('load', function() {
+            const rowsToShowSelect = document.getElementById('rowsToShow');
+            const selectedValue = rowsToShowSelect.value;
+            filterRows(selectedValue);
+        });
+    </script>
+    
+    <!-- Script para establecer el valor predeterminado y actualizar la tabla -->
+    <script>
+        // Función para establecer el valor predeterminado de la selección y actualizar la tabla
+        window.addEventListener('load', function() {
+            const rowsToShowSelect = document.getElementById('rowsToShow');
+            rowsToShowSelect.value = '5'; // Establecer 5 como valor predeterminado
+            filterRows('5'); // Actualizar la tabla con 5 filas al cargar la página
+        });
+    </script>
+
+    <!-- Script para hacer funcionar el archivo Predicciones con el form-->
+    <script>
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evitar que el formulario se envíe por defecto
+
+            // Obtener los datos del formulario
+            const formData = new FormData(this);
+
+            // Realizar una solicitud POST al servidor
+            fetch('/obtener_prediccion', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Mostrar los resultados en un cuadro de diálogo
+                alert(data.resultado);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
 
 </body>
-<footer class="footer">
-    <img src="/img/logoblanco.png" alt="" class="logof">
-    <div class="social-icons-container">
-        <a href="" class="social-icon"></a>
-        <a href="" class="social-icon"></a>
-        <a href="" class="social-icon"></a>
-        <a href="" class="social-icon"></a>
-    </div>
-    <ul class="footer-menu-container">
-        <li class="menu-item">Legal</li>
-        <li class="menu-item">cookies</li>
-        <li class="menu-item">Privacidad</li>
-        <li class="menu-item">Inicio</li>
-    </ul>
-    <span class="copyright">&copy;2024, Uptx, Derechos reservados.</span>
-</footer>
 </html>
